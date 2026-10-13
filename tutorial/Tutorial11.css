@@ -1,0 +1,89 @@
+/* Body */
+body {
+padding: 20px;}
+
+/* 1. font-variant */
+h1.title {
+font-variant: small-caps;
+position: relative;
+left: 20px;
+}
+
+/* Bottom heading */
+h1.bottom-title {
+font-variant: small-caps;
+}
+
+/* 2. overflow */
+p.p1 {
+overflow: auto;
+width: 500px;
+height: 60px;
+background-color: lightyellow;
+}
+
+/* 3. opacity */
+font.small-caps {
+font-variant: small-caps;
+opacity: 0.7;
+}
+
+/* 4. vertical-align */
+/* 5. rotation */
+p.p2 {
+vertical-align: middle;
+display: inline-block;
+transform: rotate(2deg);
+}
+
+/* 6. position */
+p.p3 {
+position: relative;
+left: 10px;
+opacity: 0.8;
+}
+
+/* 7. bookmark */
+a {
+color: blue;
+text-decoration: underline;
+}
+
+/* 8. inline-box-align */
+p.p4 {
+display: inline;
+vertical-align: middle;
+}
+
+/* 9. grid-columns */
+/* 10. grid-rows */
+.grid-container {
+display: grid;
+grid-template-columns: 150px 150px;
+grid-template-rows: 50px 50px;
+gap: 5px;
+}
+
+.html {
+background-color: lightblue;
+}
+
+.css {
+background-color: lightpink;
+}
+
+.javascript {
+background-color: lightgreen;
+}
+
+.webpage {
+background-color: lightyellow;
+}
+
+/* Bookmark destination */
+#javascript-bottom {
+margin-top: 500px;
+padding: 20px;
+background-color: lightyellow;
+}
+
