@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.page-container {
+    width: 100%;
+    max-width: 440px;
+}
+.login-card {
+    padding: 35px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px black;
+    text-align: left;
+}
+h1 {
+    margin: 0;
+    font-size: 27px;
+    text-align: left;
+}
+.subtitle {
+    margin: 10px 0 28px;
+    color: grey;
+    font-size: 14px;
+    text-align: left;
+}
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 14px;
+}
+input:focus {
+    outline: 2px solid #5b5bd6;
+}
+.remember-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+    font-size: 13px;
+    font-weight: normal;
+    cursor: pointer;
+    text-align: left;
+}
+.login-button {
+    width: 100%;
+    padding: 14px;
+    color: white;
+    background-color: #368bd1;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+.login-button:hover {
+    background-color: #2675b8;
+}
+@media (max-width: 480px) {
+    .login-card {
+        padding: 26px 22px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+</style>
+</head>
+<body>
+<main class="page-container">
+<section class="login-card">
+<h1>Log in to your account</h1>
+<p class="subtitle">Enter your details below to continue.</p>
+<form>
+<div class="form-group">
+<label for="username">Username</label>
+<input type="text" id="username" name="username" placeholder="Enter your username" autocomplete="username" required minlength="3" maxlength="30">
+</div>
+<div class="form-group">
+<label for="password">Password</label>
+<input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required minlength="8">
+</div>
+<label class="remember-label">
+<input type="checkbox" name="rememberMe">
+Remember me
+</label>
+<button class="login-button" type="submit">Log In</button>
+</form>
+</section>
+</main>
+</body>
+</html>
