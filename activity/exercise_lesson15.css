@@ -1,0 +1,58 @@
+
+body {
+    margin-top: 50px;
+}
+
+.form-container {
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Times New Roman";
+    font-size: 16px;
+    color: black;
+    text-align: center;
+}
+
+table {
+    width: 98%;
+    background-color: powderblue;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    font-family: "Times New Roman";
+    font-size: 12px;
+}
+
+td:first-child {
+    background-color: #697F8D;
+    color: white;
+    font-weight: bold;
+    width: 40%;
+    border-bottom: 1px solid white;
+}
+
+td:nth-child(2) {
+    background-color: powderblue;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 95px;
+}
+
+textarea {
+    width: 130px;
+    height: 35px;
+}
+.button-area {
+    background-color: powderblue;
+    text-align: center;
+    padding: 15px;
+    width: 98%;
+    box-sizing: border-box;
+}
