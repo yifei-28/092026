@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Lock page to exactly 100% viewport height */
+    overflow: hidden; /* Prevent page-level scrollbars */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: lightblue;
+    text-align: center;
+    padding: 15px; /* Slightly reduced padding to preserve iframe viewing area */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    flex: 1; /* Automatically stretches to take up all remaining space */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+main h2, main p {
+    margin: 5px 0; /* Compact margins to keep content tightly packed */
+}
+
+iframe {
+    width: 100%;
+    flex: 1; /* Fills remaining space inside <main> without fixed vh units */
+    border: none;
+}
+
+footer {
+    background-color: lightblue;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    html, body {
+        height: auto;
+        overflow: auto; /* Restores scrolling for small screens where stacked content exceeds height */
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    iframe {
+        height: 60vh;
+    }
+}
