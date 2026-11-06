@@ -1,0 +1,257 @@
+<html>
+<head>
+<title>Quiz Lesson16</title>
+<link rel=icon href=sunflower.jpg type=image/jpg>
+<meta name=viewport content=width=device-width, initial-scale=1.0>
+
+<style>
+body {
+font-family: Arial;
+font-size: 14px;
+}
+table{
+width:85%;
+border-collapse:collapse;
+border-style:solid;
+}
+td {
+padding: 4px;
+}
+h5{
+color:blue;
+}
+h5.red{
+color:red;
+}
+textarea {
+width: 95%;
+height: 70px;
+box-sizing: border-box;
+}
+
+.buttons {
+text-align: center;
+margin: 35px;
+}
+
+input[type=reset],
+input[type=submit] {
+font-size: 16px;
+padding: 5px 15px;
+margin: 0 25px;
+cursor: pointer;
+}
+
+.question {
+width: 70%;
+}
+
+.answer {
+width: 30%;
+}
+.questions-table td {
+    padding: 12px;
+}
+</style>
+
+<script>
+function validateForm(){
+//to validate text-do not allow empty
+let x= document.MyFirstForm.studentId.value;
+if(x == ""){
+  alert("Please provide your Student ID!");
+  return false;
+ }
+
+let z= document.MyFirstForm.studentName.value;
+if(z == ""){
+  alert("Please provide your Student Name!");
+  return false;
+ }
+//to validate email - do not allow empty
+let email = document.MyFirstForm.email.value;
+if(email == ""){
+    alert("Please provide your Email Address!");
+    return false;
+}
+//to validate text - only allow numeric
+let y = document.MyFirstForm.studentIC.value;
+var letters = /^[0-9]+$/;
+if(!y.match(letters))
+{
+  alert("Please input numeric only for your IC No.");
+  return false;
+ }
+
+// 5. Validate Course - must select a course
+let course = document.MyFirstForm.course.value;
+if(course == "0") {
+    alert("Please select your Course!");
+    return false;
+}
+
+// 6. Validate Date of Birth - cannot be empty
+let dob = document.MyFirstForm.dob.value;
+if(dob == "") {
+    alert("Please select your Date of Birth!");
+    return false;
+}
+
+// 7. Validate Question 1 - radio button
+if(document.MyFirstForm.question1.value == "") {
+    alert("Please answer Question 1!");
+    return false;
+}
+
+// 8. Validate Question 2 - radio button
+if(document.MyFirstForm.question2.value == "") {
+    alert("Please answer Question 2!");
+    return false;
+}
+
+// 9. Validate Question 3 - checkbox
+let checkbox = document.getElementsByName("fav_sub");
+let checked = false;
+
+for(let i = 0; i < checkbox.length; i++) {
+    if(checkbox[i].checked == true) {
+        checked = true;
+    }
+}
+
+if(checked == false) {
+    alert("Please select at least one answer for Question 3!");
+    return false;
+}
+
+// 10. Validate Question 4 - suggestions
+let suggestion = document.MyFirstForm.suggestion.value;
+if(suggestion.trim() == "") {
+    alert("Please provide your wishes or suggestions!");
+    return false;
+}
+
+alert("Survey submitted successfully!");
+return true;
+
+}
+</script>
+
+</head>
+
+<body topmargin=50>
+<center>
+<form name=MyFirstForm onsubmit="return validateForm()">
+<h1> DCS3003 Website Design Course Survey</h1>
+<table>
+<tr>
+<td colspan=4 align=left><h5><u>Personal detail</u></h5></td>
+</tr>
+<tr align=left>
+<td><b>Student ID</b></td>
+<td>:<input type=text name=studentId></td>
+<td><b>Student Name</b></td>
+<td>:<input type=text name=studentName></td>
+</tr>
+<tr align=left>
+<td><b>Email address</b></td>
+<td>:<input type=email name=email></td>
+<td><b>IC No.</b></td>
+<td>:<input type=text name=studentIC></td>
+</tr>
+<tr align=left>
+<td><b>Course</b></td>
+<td>:<select name=course>
+<option value="0">-List of Courses-</option>
+
+<optgroup label="Diploma In Computer Science">
+<option value="DCS_S1">Semester 1</option>
+<option value="DCS_S2">Semester 2</option>
+<option value="DCS_S3">Semester 3</option>
+<option value="DCS_S4">Semester 4</option>
+<option value="DCS_S5">Semester 5</option>
+<option value="DCS_S6">Semester 6</option>
+</optgroup>
+
+<option value="DIB">Diploma In Business</option>
+<option value="DAS">Diploma In Airline Services</option>
+</select>
+</td>
+<td><b>D.O.B</b></td>
+<td>:<input type=date name=dob></td>
+</tr>
+</table>
+<br><br><br>
+<table class="questions-table">
+
+<tr>
+<td colspan=2>
+<h5><u>Questions</u></h5>
+<h5 class="red">Please answer all questions</h5>
+</td>
+</tr>
+
+<tr>
+<td class="question">
+1) Have you grasped the content of the Website Design so far?
+</td>
+<td class="answer">
+<input type=radio name=question1 value=yes> YES<br>
+<input type=radio name=question1 value=no> NO
+</td>
+</tr>
+
+<tr>
+<td>
+2) Can you now create a simple but interactive website?
+</td>
+<td>
+<input type=radio name=question2 value=yes> YES<br>
+<input type=radio name=question2 value=no> NO
+</td>
+</tr>
+
+<tr>
+<td>
+3) What have you learned so far?
+</td>
+<td>
+<input type=checkbox name=fav_sub value=Knowledge>
+Knowledge<br>
+
+<input type=checkbox name=fav_sub value="Practical Skills">
+Practical Skills<br>
+
+<input type=checkbox name=fav_sub value="Problem Solving">
+Problem Solving<br>
+
+<input type=checkbox name=fav_sub value="Self-Exploration Skills">
+Self-Exploration Skills
+</td>
+</tr>
+
+<tr>
+<td colspan=2>
+4) Wish items / suggestions
+<span style="color:red">*</span>
+</td>
+</tr>
+
+<tr>
+<td colspan=2 align=center>
+<textarea name=suggestion rows=4 cols=50></textarea>
+</td>
+</tr>
+
+</table>
+
+<br><br>
+
+<input type=reset value=Reset>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=submit value=submit>
+
+</form>
+</center>
+</body>
+</html>
