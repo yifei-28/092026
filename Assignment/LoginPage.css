@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #d9efff;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+.login-card {
+    padding: 25px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+h1 {
+    margin: 0;
+    font-size: 27px;
+    text-align: left;
+}
+
+.subtitle {
+    margin: 10px 0 28px;
+    color: grey;
+    font-size: 14px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: 2px solid #368bd1;
+    outline-offset: 1px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    padding-right: 45px;
+}
+
+.show-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: grey;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.show-password:hover {
+    color: #368bd1;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.forgot-password a {
+    color: #368bd1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.remember-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+    font-size: 13px;
+    font-weight: normal;
+    cursor: pointer;
+    text-align: left;
+}
+
+.remember-label input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    color: white;
+    background-color: #368bd1;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.login-button:hover {
+    background-color: #2675b8;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 26px 22px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
