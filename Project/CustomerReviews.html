@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | Banana Bliss</title>
+    <link rel="stylesheet" href="ProjectStyle.css">
+    <script src="Reviews.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+    <h2>Banana Bliss🍌</h2>
+
+    <a href="HomePage.html">Home</a>
+    <a href="AboutUs.html">About Us</a>
+    <a href="Menu.html">Menu</a>
+    <a href="Location&Contact.html">Location & Contact</a>
+    <a href="CustomerReviews.html" class="active">Customer Reviews</a>
+    <a href="ShoppingCart.html">Shopping Cart</a>
+</nav>
+
+<main class="main-content">
+
+<section class="reviews-hero">
+<h1>Customer Reviews</h1>
+<h2>Your Feedback Makes Us Sweeter!</h2>
+<p>
+We love hearing from our customers.
+Share your experience and let us know
+what you think about Banana Bliss!
+</p>
+</section>
+
+<section class="reviews-summary">
+<h2>Our Customer Ratings</h2>
+<div class="rating-summary-card">
+<h3 id="averageRating">0.0 / 5</h3>
+<p id="averageStars">☆☆☆☆☆</p>
+<p id="totalReviews">No reviews yet</p>
+</div>
+</section>
+
+<!-- Display Customer Reviews -->
+<section class="customer-reviews-section" id="reviewsSection">
+<h2>What Our Customers Say</h2>
+<p>
+Read customer reviews and discover their
+experiences with Banana Bliss!
+</p>
+
+<!-- Reviews Will Appear Here Automatically -->
+<div class="customer-review-grid" id="reviewList">
+</div>
+</section>
+
+<section class="reviews-form-section">
+<h2>Leave Us a Review</h2>
+<p>
+Have you tried our delicious banana desserts?
+We would love to hear your feedback!
+</p>
+<div class="reviews-form-card">
+<form id="reviewForm" novalidate>
+
+<!-- Customer Name -->
+<div class="review-form-group">
+<label for="reviewName">Your Name</label>
+<input type="text" id="reviewName" name="reviewName" placeholder="Enter your name" minlength="2" maxlength="50" required>
+</div>
+
+<!-- Star Rating -->
+<div class="review-form-group">
+<label for="rating">Your Rating</label>
+<select id="rating" name="rating" required>
+<option value="">-- Choose Your Rating --</option>
+<option value="5">★★★★★ - Excellent</option>
+<option value="4">★★★★☆ - Very Good</option>
+<option value="3">★★★☆☆ - Good</option>
+<option value="2">★★☆☆☆ - Fair</option>
+<option value="1">★☆☆☆☆ - Poor</option>
+</select>
+</div>
+
+<!-- Customer Feedback -->
+<div class="review-form-group">
+<label for="reviewMessage">Your Feedback</label>
+<textarea id="reviewMessage" name="reviewMessage" rows="5" placeholder="Share your experience with Banana Bliss..." minlength="10" maxlength="500" required></textarea>
+</div>
+
+<div class="review-form-buttons">
+<button type="submit" class="btn">Submit Review</button>
+<button type="reset" class="btn review-reset-btn">Reset</button>
+</div>
+
+<!-- Review Confirmation Message -->
+<p id="reviewStatus" role="status" aria-live="polite"></p>
+
+</form>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<p>&copy; 2026 Banana Bliss. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
