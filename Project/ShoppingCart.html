@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Banana Bliss</title>
+    <link rel="stylesheet" href="ProjectStyle.css">
+    <script src="ShoppingCart.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+    <h2>Banana Bliss🍌</h2>
+
+    <a href="HomePage.html">Home</a>
+    <a href="AboutUs.html">About Us</a>
+    <a href="Menu.html">Menu</a>
+    <a href="Location&Contact.html">Location & Contact</a>
+    <a href="CustomerReviews.html">Customer Reviews</a>
+    <a href="ShoppingCart.html" class="active">Shopping Cart</a>
+</nav>
+
+<main class="main-content">
+
+<section class="cart-hero">
+<h1>My Shopping Cart 🛒</h1>
+<h2>Your Favourite Banana Treats!</h2>
+<p>
+Review your selected desserts and complete your order.
+</p>
+</section>
+
+<section class="cart-section">
+<h2>Your Cart Items</h2>
+<p>
+Check your selected desserts and total payment before checkout.
+</p>
+
+<div class="cart-combined-container">
+
+<!-- Shopping Cart Items -->
+<div class="cart-items-container" id="cartItems">
+</div>
+
+<!-- Order Summary -->
+<div class="order-summary-card">
+<h2>Order Summary</h2>
+
+<div class="summary-row">
+<span>Subtotal</span>
+<span id="subtotal">RM0.00</span>
+</div>
+
+<div class="summary-row">
+<span>Delivery Fee</span>
+<span id="deliveryFee">RM0.00</span>
+</div>
+
+<hr>
+
+<div class="summary-row summary-total">
+<strong>Total Payment</strong>
+<strong id="totalPayment">RM0.00</strong>
+</div>
+</div>
+
+<div class="cart-actions">
+<a href="Menu.html" class="btn">Continue Shopping</a>
+<button type="button" class="btn clear-cart-btn" id="clearCartBtn">
+Clear Cart
+</button>
+</div>
+
+</div>
+</section>
+
+<section class="checkout-section">
+<h2>Checkout Details</h2>
+<p>
+Please fill in your information to place your order.
+</p>
+
+<div class="checkout-card">
+<form id="checkoutForm">
+
+<!-- Customer Name -->
+<div class="checkout-form-group">
+<label for="customerName">Full Name</label>
+<input type="text" id="customerName" name="customerName" placeholder="Enter your full name" minlength="2" maxlength="100" required>
+</div>
+
+<!-- Phone Number -->
+<div class="checkout-form-group">
+<label for="customerPhone">Phone Number</label>
+<input type="tel" id="customerPhone" name="customerPhone" placeholder="Example: 0123456789" required>
+</div>
+
+<!-- Email Address -->
+<div class="checkout-form-group">
+<label for="customerEmail">Email Address</label>
+<input type="email" id="customerEmail" name="customerEmail" placeholder="Enter your email address" required>
+</div>
+
+<!-- Order Method -->
+<div class="checkout-form-group">
+
+<label>Order Method</label>
+
+<div class="delivery-options">
+
+<label>
+<input type="radio" name="orderMethod" value="pickup" checked>
+Self Pickup (Free)
+</label>
+
+<label>
+<input type="radio" name="orderMethod" value="delivery">
+Delivery (RM6.00)
+</label>
+
+</div>
+</div>
+
+<!-- Branch Selection for Pickup and Delivery -->
+<div class="checkout-form-group" id="branchGroup">
+
+<label for="pickupBranch">Select Branch</label>
+
+<select id="pickupBranch" name="pickupBranch" required>
+
+<option value="">-- Select a Branch --</option>
+
+<option value="jb">
+Johor Bahru - Mid Valley Southkey
+</option>
+
+<option value="kl">
+Kuala Lumpur - The Exchange TRX
+</option>
+
+<option value="penang">
+Penang - Penang Road
+</option>
+
+</select>
+
+</div>
+
+<!-- Delivery Address and Distance Check -->
+<div class="checkout-form-group" id="addressGroup" hidden>
+<label for="customerAddress">Delivery Address</label>
+<textarea id="customerAddress" name="customerAddress" rows="4" placeholder="Enter your complete delivery address"></textarea>
+<p>
+<strong>Maximum Delivery Distance:</strong> 12 km
+</p>
+
+<!-- Check Distance Button -->
+<button type="button" class="btn" id="checkDistanceBtn">
+Check Delivery Distance
+</button>
+
+<!-- Distance Result -->
+<p id="distanceMessage" role="status" aria-live="polite">
+Please check your delivery distance before placing an order.
+</p>
+</div>
+
+<!-- Special Requests -->
+<div class="checkout-form-group">
+<label for="orderNotes">Special Requests (Optional)</label>
+<textarea id="orderNotes" name="orderNotes" rows="3" placeholder="Any special requests for your order?"></textarea>
+</div>
+
+<!-- Place Order Button -->
+<div class="checkout-buttons">
+<button type="submit" class="btn place-order-btn">
+Place Order
+</button>
+</div>
+
+<!-- Order Confirmation -->
+<p id="orderMessage" role="status" aria-live="polite"></p>
+</form>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<p>&copy; 2026 Banana Bliss. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
