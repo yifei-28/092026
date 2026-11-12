@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Banana Bliss</title>
+    <link rel="stylesheet" href="ProjectStyle.css">
+    <script src="Contact.js" defer></script>
+</head>
+<body>
+
+<nav class="sidebar">
+    <h2>Banana Bliss🍌</h2>
+
+    <a href="HomePage.html">Home</a>
+    <a href="AboutUs.html">About Us</a>
+    <a href="Menu.html">Menu</a>
+    <a href="Location&Contact.html" class="active">Location & Contact</a>
+    <a href="CustomerReviews.html">Customer Reviews</a>
+    <a href="ShoppingCart.html">Shopping Cart</a>
+</nav>
+
+<main class="main-content">
+<section class="contact-hero">
+<h1>Location & Contact Us</h1>
+<h2>We'd Love to Hear From You!</h2>
+<p>
+Have any questions about our banana desserts?
+Feel free to contact us or visit our café!
+</p>
+</section>    
+
+<section class="contact-info-section">
+<h2>Our Locations</h2>
+<p>
+Select a Banana Bliss branch to view its location on Google Maps.
+</p>
+
+<div class="branch-container">
+
+<!-- Branch 1: Johor Bahru -->
+<button type="button" class="branch-card active" data-branch="0">
+
+<h3>📍 Banana Bliss - Johor Bahru</h3>
+<p>The Mall, Mid Valley Southkey</p>
+<p>Persiaran Southkey 1, 80150 Johor Bahru, Johor</p>
+<span>View Location</span>
+</button>
+
+<!-- Branch 2: Kuala Lumpur -->
+<button type="button" class="branch-card" data-branch="1">
+
+<h3>📍 Banana Bliss - Kuala Lumpur</h3>
+
+<p>The Exchange TRX</p>
+<p>Persiaran TRX, 55188 Kuala Lumpur</p>
+<span>View Location</span>
+</button>
+
+<!-- Branch 3: Penang -->
+<button type="button" class="branch-card" data-branch="2">
+
+<h3>📍 Banana Bliss - Penang</h3>
+<p>Penang Road</p>
+<p>Jalan Penang, George Town, Penang</p>
+<span>View Location</span>
+</button>
+
+</div>
+</section>
+
+<section class="contact-map-section" id="storeMapSection">
+<h2>Find Our Store</h2>
+<p id="selectedBranch">
+Showing: Banana Bliss - Johor Bahru
+</p>
+
+<div class="map-container">
+
+<iframe
+id="storeMap"
+src="https://www.google.com/maps?q=The+Mall+Mid+Valley+Southkey+Johor+Bahru+Malaysia&amp;z=17&amp;output=embed"
+title="Selected Banana Bliss Location"
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+</div>
+</section>
+
+<section class="contact-info-section">
+<h2>Contact Information</h2>
+<p>
+Have any questions? Feel free to contact us!
+</p>
+
+<div class="contact-info-grid">
+
+
+<div class="contact-info-card">
+<h3>📞 Phone</h3>
+<p>012-3456 7890</p>
+</div>
+
+<div class="contact-info-card">
+<h3>✉️ Email</h3>
+<p>bananabliss@gmail.com</p>
+</div>
+
+
+<div class="contact-info-card">
+<h3>🕒 Opening Hours</h3>
+<p>Monday - Sunday</p>
+<p>11a.m. to 8p.m.</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="contact-form-section">
+<h2>Send Us a Message</h2>
+<p>
+Have a question, suggestion, or feedback?
+Fill in the form below!
+</p>
+
+<div class="contact-form-card">
+<form id="contactForm">
+
+
+<div class="contact-form-group">
+<label for="contactName">Your Name</label>
+<input type="text" id="contactName" name="contactName" placeholder="Enter your name" minlength="2" maxlength="50" required>
+</div>
+
+
+<div class="contact-form-group">
+<label for="contactEmail">Email Address</label>
+<input type="email" id="contactEmail" name="contactEmail" placeholder="Enter your email" required>
+</div>
+
+
+<div class="contact-form-group">
+<label for="contactSubject">Subject</label>
+<select id="contactSubject" name="contactSubject" required>
+
+<option value="">-- Select a Subject --</option>
+<option value="General Enquiry">General Enquiry</option>
+<option value="Product Enquiry">Product Enquiry</option>
+<option value="Order Enquiry">Order Enquiry</option>
+<option value="Feedback">Feedback</option>
+<option value="Other">Other</option>
+
+</select>
+</div>
+
+
+<div class="contact-form-group">
+<label for="contactMessage">Your Message</label>
+<textarea id="contactMessage" name="contactMessage" rows="5" placeholder="Write your message here..." minlength="10" required></textarea>
+</div>
+
+
+<div class="contact-form-buttons">
+<button type="submit" class="btn">Send Message</button>
+<button type="reset" class="btn contact-reset-btn">Reset</button>
+</div>
+
+<p id="contactStatus" role="status" aria-live="polite"></p>
+
+</form>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<p>&copy; 2026 Banana Bliss. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
